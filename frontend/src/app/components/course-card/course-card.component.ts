@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
-  standalone: true,
   imports: [CommonModule],
+  standalone:true,
   templateUrl: './course-card.component.html'
 })
 export class CourseCardComponent {
