@@ -1,3 +1,0 @@
-# CDI
-CDI projects 
-

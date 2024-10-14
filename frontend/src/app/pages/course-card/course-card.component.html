@@ -1,0 +1,21 @@
+
+   <a [href]="link" class="relative rounded-xl overflow-hidden shadow-lg group w-full h-full block">
+    <img
+      *ngIf="imageSrc"
+      [src]="imageSrc"
+      [alt]="title"
+      class="w-full h-full object-cover transition-transform duration-100 ease-in-out transform group-hover:scale-110"
+    />
+    
+    <div
+      *ngIf="imageSrc"
+      class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center w-full h-full"
+    >
+      <span class="text-white text-lg font-semibold w-full text-center">{{ title }}</span>
+    </div>
+  
+    <div *ngIf="!imageSrc" class="bg-[#003377] flex items-center justify-center h-full w-full">
+      <span class="text-orange-500 text-lg font-semibold w-full text-center">{{ title }}</span>
+    </div>
+  </a>
+  
