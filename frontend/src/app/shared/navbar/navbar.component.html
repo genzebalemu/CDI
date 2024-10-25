@@ -1,11 +1,10 @@
-<nav id="navbar" class="fixed top-0 left-0 w-full bg-white py-4 transition-all duration-300 z-20 opacity-100">
+<nav id="navbar" class="sticky bg-white top-0 left-0 w-full  py-4 transition-all duration-300 z-20 opacity-100">
   <div class="container mx-auto flex justify-between items-center">
-    <!-- Logo -->
+
     <div class="text-3xl ml-6 font-bold text-blue-900 p-0">
       <span class="text-blue-900 font-jetbrains-extrabold px-0 mx-0">CDI</span>
       <span class="text-[#FD7706] font-poppins font-extrabold p-0 ml-[4px]">24</span>
     </div>
-    <!-- Burger Menu Icon -->
     <div class="lg:hidden mr-1">
       <button id="burger-menu" class="text-blue-900 focus:outline-none transition-transform duration-300">
         <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -13,24 +12,23 @@
         </svg>
       </button>
     </div>
-    <!-- Menu Links -->
+    
     <div id="menu" class="hidden lg:flex space-x-6 text-gray-600 font-poppins">
-      <a routerLink="/home" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md active:bg-blue-900 active:text-white">Home</a>
-      <a routerLink="/guides" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Guides</a>
-      <a routerLink="/learning" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Learning</a>
-      <a routerLink="/register-instructor" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Register as Instructor</a>
-      <a routerLink="/signup" class="lg:text-[18px] bg-orange-400 text-white py-2 px-4 rounded-full hover:bg-orange-500">Sign Up</a>
-      <a routerLink="/login" class="border border-orange-400 text-orange-400 py-2 px-4 rounded-full hover:bg-orange-50">Login</a>
+      <a href="/home" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md active:bg-blue-900 active:text-white">Home</a>
+      <a href="/guides" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Guides</a>
+      <a href="/learning" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Learning</a>
+      <a href="/register-instructor" class="lg:text-[18px] hover:bg-blue-900 hover:text-white py-2 px-4 rounded-md">Register as Instructor</a>
+      <a href="/register" class="lg:text-[18px] bg-orange-400 text-white py-2 px-4 rounded-full hover:bg-orange-500">Sign Up</a>
+      <a href="/login" class="border border-orange-400 text-orange-400 py-2 px-4 rounded-full hover:bg-orange-50">Login</a>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden bg-gray-100 text-gray-600 font-poppins space-y-1 py-4 absolute right-4 mt-2 w-[200px] rounded-lg shadow-lg transform scale-95 opacity-0 transition-all duration-300 ease-out">
     <a routerLink="/home" class="block px-4 py-2 hover:bg-blue-900 hover:text-white rounded-md">Home</a>
     <a routerLink="/guides" class="block px-4 py-2 hover:bg-blue-900 hover:text-white rounded-md">Guides</a>
     <a routerLink="/learning" class="block px-4 py-2 hover:bg-blue-900 hover:text-white rounded-md">Learning</a>
     <a routerLink="/register-instructor" class="block px-4 py-2 hover:bg-blue-900 hover:text-white rounded-md">Register as Instructor</a>
-    <a routerLink="/signup" class="block bg-orange-400 text-white mt-2 py-2 px-4 rounded-full hover:bg-[#003377] text-center mx-3">Sign Up</a>
-    <a routerLink="/login" class="block border border-orange-400 text-orange-400 mt-2 py-2 px-4 rounded-full hover:bg-[#003377] hover:text-white text-center mx-3">Login</a>
+    <a href="/register" class="block bg-orange-400 text-white mt-2 py-2 px-4 rounded-full hover:bg-[#003377] text-center mx-3">Sign Up</a>
+    <a href="/login" class="block border border-orange-400 text-orange-400 mt-2 py-2 px-4 rounded-full hover:bg-[#003377] hover:text-white text-center mx-3">Login</a>
   </div>
 </nav>

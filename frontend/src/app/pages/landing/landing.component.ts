@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { CourseCardComponent } from '../../components/course-card/course-card.component';
 import { Whycdi24CardComponent } from '../../components/whycdi24-card/whycdi24-card.component';
 import { CommonModule } from '@angular/common';
+import { CDIbenefitCardComponent } from '../../components/cdibenefit-card/cdibenefit-card.component';
+import { ScholarshipWinnerCardComponent } from '../../components/scholarship-winner-card/scholarship-winner-card.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CourseCardComponent,Whycdi24CardComponent ,CommonModule],
+  imports: [CourseCardComponent,Whycdi24CardComponent,CDIbenefitCardComponent,ScholarshipWinnerCardComponent,CommonModule],
   templateUrl: './landing.component.html'
 })
 export class LandingComponent {
@@ -84,6 +86,23 @@ export class LandingComponent {
       imageSrc: 'assets/img/Tewdros.jpg'
     };
   
-    // Create an array containing the same winner six times
     scholarshipWinners = Array(6).fill(this.scholarshipWinner);
+
+    cdiBenefits = [
+      {
+        imgSrc: 'https://via.placeholder.com/80',
+        title: 'Your Own Plan',
+        description: 'Our extensive experience with both students and teachers has helped us co-design the best teaching methods that don\'t throw you off your usual way of conveying knowledge to your students. We work together with you to create and enhance the best environment for both you and your students.'
+      },
+      {
+        imgSrc: 'https://via.placeholder.com/80',
+        title: 'Inspire Others',
+        description: 'Your active participation in the teaching process using our platform will help you reignite and spark interest in your students. This creates an enjoyable and informative learning process that appreciates the effort put into teaching inspired trainers new skills they will use in their careers.'
+      },
+      {
+        imgSrc: 'https://via.placeholder.com/80',
+        title: 'Expand Your Horizon',
+        description: 'If you are a teacher or trainer considering venturing into online platforms to find more opportunities in your line of work, you have found the right place for you. Technology has made it possible for you to set up your office anywhere and start teaching online. CDI 24 is the best platform to teach online classes efficiently.'
+      }
+    ];
   }

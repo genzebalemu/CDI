@@ -1,0 +1,15 @@
+/* navbar.component.css */
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 20; /* Ensures the navbar is above other content */
+}
+
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+}
+
