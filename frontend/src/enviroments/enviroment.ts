@@ -8,8 +8,11 @@ export const environment = {
     messagingSenderId: "533832289834",
     appId: "1:533832289834:web:dfa39c0d078a80f516fd53",
     measurementId: "G-19Z5KZMRGV"
-      }
+      },
+      recaptcha: {
+        siteKey: '6LeRRm4qAAAAAPcF1nYWTn41kpiSjokGNT5mGLa7',
+      },
   };
 
 
-
+ 

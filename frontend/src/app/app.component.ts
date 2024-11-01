@@ -5,7 +5,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { RegisterStudentComponent } from './pages/auth/register-student/register-student.component';
 import { CDIbenefitCardComponent } from './components/cdibenefit-card/cdibenefit-card.component';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { AuthService } from './services/auth.service';
 import { OnInit } from '@angular/core';
 
 @Component({
