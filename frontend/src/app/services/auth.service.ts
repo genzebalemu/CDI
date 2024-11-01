@@ -10,9 +10,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
    auth = inject(Auth);
    http = inject(HttpClient);
-   basicURL = 'https://64.23.233.117:7000/v1/api';
-   registerurl = '/student';
-   loginurl="/user/check_user"
+
 
 
    registerStudent(studentData: any, token: string): Observable<any> {
