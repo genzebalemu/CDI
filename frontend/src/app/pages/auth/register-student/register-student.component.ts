@@ -137,7 +137,6 @@ verifyOtp() {
                       (error) => {
                           if (error.error.code === 11000) {
                               console.error('Registration failed: Phone number already in use.');
-                              alert('This phone number is already registered. Please use a different number.');
                           } else {
                               console.error('Registration failed:', error);
                               alert('An error occurred during registration. Please try again.');

@@ -11,23 +11,27 @@ export class AuthService {
    auth = inject(Auth);
    http = inject(HttpClient);
    basicURL = 'https://64.23.233.117:7000/v1/api';
-   url = '/student';
+   registerurl = '/student';
+   loginurl="/user/check_user"
+
 
    registerStudent(studentData: any, token: string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-
+      'Authorization': `Bearer ${token}`
     });
     
-    return this.http.post(`${this.basicURL}${this.url}`, studentData, { headers });
+    return this.http.post(`${this.basicURL}${this.registerurl}`, studentData, { headers });
   }
   
-  loginStudent(phoneNumber:string): Observable<any> {
+  loginStudent(uuid:string, token:string): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
+      "Authorization": `Bearer ${token}`
     });
    
-    return this.http.post(`${this.basicURL}${this.url}`, phoneNumber, { headers })
+    const payload = { uuid: uuid };
+    return this.http.post(`${this.basicURL}${this.loginurl}`,payload, { headers })
   }
 }
 

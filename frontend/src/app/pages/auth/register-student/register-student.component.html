@@ -150,8 +150,8 @@
                                        [separateDialCode]="false" 
                                        [numberFormat]="PhoneNumberFormat.National"
                                        formControlName="phoneNumber"
-                                       (countryChange)="onCountryChange($event)">
-                                    </ngx-intl-tel-input>
+                                    (countryChange)="onCountryChange($event)">
+                                </ngx-intl-tel-input>
                                 </div>
 
                                 <div *ngIf="registerForm.get('phoneNumber')?.touched && registerForm.get('phoneNumber')?.invalid" class="text-red-500 text-sm mt-1">

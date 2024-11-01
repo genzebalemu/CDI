@@ -27,7 +27,7 @@
           <br />
   
           <div class="w-[400px] bg-white rounded-2xl shadow-lg p-8">
-            <form [formGroup]="phoneForm" (ngSubmit)="onLogin()" >
+            <form *ngIf="!showVerificationInput" [formGroup]="phoneForm" (ngSubmit)="requestOtp()" >
                 <div class="mb-4">
                   <label for="phone" class="block text-gray-400 text-sm font-bold mb-2">
                     Phone number <span class="text-red-600">*</span>
@@ -55,13 +55,41 @@
                   <p *ngIf="phoneForm.get('phone')?.errors?.['validatePhoneNumber']">Enter a valid phone number.</p>
                 </div>
                 </div>
+                <div id="recaptcha-container"></div>
                 <button id="nextButton"
-                class="text-white font-bold py-2 px-4 rounded-3xl w-full bg-[#003377] " type="submit">
-                Next
-            </button>
+                   class="text-white font-bold py-2 px-4 rounded-3xl w-full bg-[#003377] " type="submit">
+                   Next
+               </button>
               </form>
-              
-  
+
+
+              <form *ngIf="showVerificationInput" (ngSubmit)="verifyOtpAndLogin()">
+                <div class="wrapper">
+                    <div class="mb-4">
+                        <label for="verificationCode"
+                        class="block text-gray-400 text-sm font-bold mb-2">Verification Code <span class="text-[#FD7606]">*</span></label>
+                        <div class="wrapper flex items-center border border-gray-300 rounded-md">
+                           <input type="number" class="p-3 border-gray-300"  [(ngModel)]="verificationCode"  [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </div>
+            
+                    <div class="mb-4 ml-4">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" id="gg" class="form-checkbox h-4 w-4 text-white accent-[#003377]" checked>
+                            <span class="ml-2 text-gray-500">I agree to <a href="#" class="signuphere underline decoration-orange-600">Terms and conditions</a></span>
+                        </label>
+                    </div>
+            
+                    <div id="recaptcha-container"></div>
+
+                    <div class="flex items-center justify-center">
+                        <button 
+                            class="text-white font-bold py-2 px-4 rounded-3xl w-full bg-[#003377]" type="submit">
+                            verifyOtp
+                        </button>
+                    </div>
+                </div>
+            </form>
             <p class="text-center text-gray-500 mt-4">
               Don't have an account?
               <a href="/register" class="text-[#FD7606] hover:text-[#003377]">Sign up here</a>
